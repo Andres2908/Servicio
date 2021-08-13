@@ -1,74 +1,98 @@
 <template>
   <div>
     <nav
-      class="navbar header has-shadow is-primary"
+      class="navbar header has-shadow "
       role="navigation"
       aria-label="main navigation"
     >
       <div class="navbar-brand">
-        <a
-          class="navbar-item"
-          href="/"
-        >
-          <img
-            src="~assets/buefy.png"
-            alt="Buefy"
-            height="28"
-          >
+        <a class="navbar-item" href="/">
+          <img src="~assets/buefy.png" alt="Buefy" height="28" />
         </a>
 
-        <div class="navbar-burger">
-          <span />
-          <span />
-          <span />
+        <div class="=navbar-menu">
+          <div class="navbar">
+            <b-navbar-item href="#">
+              Surface
+            </b-navbar-item>
+
+            <b-dropdown
+              append-to-body
+              aria-role="menu"
+              scrollable
+              max-height="200"
+              trap-focus
+            >
+              <template #trigger>
+                <a class="navbar-item" role="button">
+                  <span>Equipos</span>
+                  <b-icon icon="menu-down"></b-icon>
+                </a>
+              </template>
+
+              <b-dropdown-item
+                v-for="item of equipos"
+                :key="item"
+                aria-role="listitem"
+                >{{ item }}</b-dropdown-item
+              >
+            </b-dropdown>
+
+            <b-dropdown
+              append-to-body
+              aria-role="menu"
+              scrollable
+              max-height="200"
+              trap-focus
+            >
+              <template #trigger>
+                <a class="navbar-item" role="button">
+                  <span>Equipos para empresas</span>
+                  <b-icon icon="menu-down"></b-icon>
+                </a>
+              </template>
+
+              <b-dropdown-item
+                v-for="item of equipos"
+                :key="item"
+                aria-role="listitem"
+                >{{ item }}</b-dropdown-item
+              >
+            </b-dropdown>
+
+            <b-navbar-item href="#">
+              Comprar ahora
+            </b-navbar-item>
+
+            <b-navbar-item href="#">
+              Soporte técnico
+            </b-navbar-item>
+          </div>
         </div>
       </div>
     </nav>
-
-    <section class="main-content columns">
-      <aside class="column is-2 section">
-        <p class="menu-label is-hidden-touch">
-          General
-        </p>
-        <ul class="menu-list">
-          <li
-            v-for="(item, key) of items"
-            :key="key"
-          >
-            <NuxtLink
-              :to="item.to"
-              exact-active-class="is-active"
-            >
-              <b-icon :icon="item.icon" /> {{ item.title }}
-            </NuxtLink>
-          </li>
-        </ul>
-      </aside>
-
-      <div class="container column is-10">
-        <Nuxt />
-      </div>
-    </section>
   </div>
 </template>
 
 <script>
 export default {
-  data () {
+  data() {
     return {
-      items: [
-        {
-          title: 'Home',
-          icon: 'home',
-          to: { name: 'index' }
-        },
-        {
-          title: 'Inspire',
-          icon: 'lightbulb',
-          to: { name: 'inspire' }
-        }
+      equipos: [
+        "Angular",
+        "Angular 2",
+        "Aurelia",
+        "Backbone",
+        "Ember",
+        "jQuery",
+        "Meteor",
+        "Node.js",
+        "Polymer",
+        "React",
+        "RxJS",
+        "Vue.js"
       ]
-    }
+    };
   }
-}
+};
 </script>
