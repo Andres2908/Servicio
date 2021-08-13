@@ -71,6 +71,7 @@
         </div>
       </div>
     </nav>
+    <Nuxt />
   </div>
 </template>
 
