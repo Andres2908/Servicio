@@ -52,10 +52,8 @@ import QuickLinks from "../components/quickLinks.vue";
 export default {
   components: { Carrusel, Card, QuickLinks },
   methods: {
-    methods: {
-      carouselImage(value) {
-        return `https://9c6368703316.ngrok.io/imagenes/card_1.jpeg`;
-      }
+    carouselImage(value) {
+      return `https://9c6368703316.ngrok.io/imagenes/card_1.jpeg`;
     }
   }
 };
