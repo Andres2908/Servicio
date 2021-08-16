@@ -7,9 +7,9 @@
             <h1 class="is-size-3">{{ carousel.title }}</h1>
             <p class="is-size-5 ">{{ carousel.text }}</p>
             <b-button type="is-dark">{{ carousel.button }}</b-button>
-
-            <figure>
-              <img :src="carouselImage(i)" alt="imagen" />
+            <div></div>
+            <figure class="image is-3by1">
+              <img :src="carouselImage(i + 1)" alt="imagen" />
             </figure>
           </div>
         </section>
@@ -51,7 +51,7 @@ export default {
     //   });
     // }
     carouselImage(value) {
-      return `https://picsum.photos/id/45${value}/1230/500`;
+      return `https://9c6368703316.ngrok.io/imagenes/carrusel_${value}.jpeg`;
     }
   },
   created() {
