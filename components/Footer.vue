@@ -27,7 +27,7 @@
                 <a href="#">Devoluciones y reembolsos</a>
               </div>
               <div class="column">
-                <p class="bd-notification is-info"><b>Educacuión</b></p>
+                <p class="bd-notification is-info"><b>Educación</b></p>
                 <br />
                 <a href="#">Office 365 para escuelas</a><br />
                 <a href="#">Office 365 para escuelas</a>
@@ -81,8 +81,7 @@ export default {};
 
 <style scoped>
 footer {
-  background-color: #bcc0cc;
-  height: 330px;
+  background-color: #e6e6e6;
   /* position: fixed;
   bottom: 0px;
   left: 0px;

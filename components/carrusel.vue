@@ -19,7 +19,6 @@
 </template>
 
 <script>
-import axios from "axios";
 export default {
   data() {
     return {
@@ -41,17 +40,8 @@ export default {
     };
   },
   methods: {
-    // carouselImage(value) {
-    //   var url = this.dataImage;
-    //   axios.get(`https://picsum.photos/id/43${value}/1230/500`).then(res => {
-    //     console.log(res.config.url);
-    //     url = res.config.url;
-    //     console.log(url);
-    //     return `${url}`;
-    //   });
-    // }
     carouselImage(value) {
-      return `https://9c6368703316.ngrok.io/imagenes/carrusel_${value}.jpeg`;
+      return `https://venus.acatlan.unam.mx/retos/imagenes/carrusel_${value}.jpeg`;
     }
   },
   created() {
